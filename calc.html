@@ -39,43 +39,74 @@
 
 
 <h1>My Calculator</h1>
-
 <table>
     <tr>
-        <td colspan="4" class="first">0</td>
+        <td colspan="4" class="first" id="result">0</td>
     </tr>
     <tr>
-        <td align=center>C</td>
-        <td align=center>+/-</td>
-        <td align=center>%</td>
-        <td align=center>/</td>
+        <td align=center id="clear">C</td>
+        <td align=center id="sign">+/-</td>
+        <td align=center id="percent">%</td>
+        <td align=center id="div">/</td>
     </tr>
     <tr>
-        <td align=center>7</td>
-        <td align=center>8</td>
-        <td align=center>9</td>
-        <td align=center>x</td>
+        <td align=center id="num7">7</td>
+        <td align=center id="num8">8</td>
+        <td align=center id="num9">9</td>
+        <td align=center id="multiply">*</td>
     </tr>
     <tr>
-        <td align=center>4</td>
-        <td align=center>5</td>
-        <td align=center>6</td>
-        <td align=center>-</td>
+        <td align=center id="num4">4</td>
+        <td align=center id="num5">5</td>
+        <td align=center id="num6">6</td>
+        <td align=center id="minus">-</td>
     </tr>
     <tr>
-        <td align=center>1</td>
-        <td align=center>2</td>
-        <td align=center>3</td>
-        <td align=center>+</td>
+        <td align=center id="num1">1</td>
+        <td align=center id="num2">2</td>
+        <td align=center id="num3">3</td>
+        <td align=center id="add">+</td>
     </tr>
     <tr>
-        <td colspan="2" align=left width="30px" height="30px" style="padding-left: 15px;">0</td>
-        <td align=center width="30px">.</td>
-        <td align=center width="30px">=</td>
+        <td colspan="2" align=left width="30px" height="30px" style="padding-left: 15px;" id="num0">0</td>
+        <td align=center width="30px" id="decimal">.</td>
+        <td align=center width="30px" id="equal">=</td>
     </tr>
-
 </table>
 
 
+
+<script>
+    function printSymbol(e) {
+        let result = document.getElementById("result")
+        let obj = e.target;
+        result.textContent = result.textContent + obj.textContent;
+
+    }
+
+    let result = document.getElementById("result")
+    let num1 = document.getElementById("num1");
+    let num2 = document.getElementById("num2");
+    let num3 = document.getElementById("num3");
+    let num4 = document.getElementById("num4");
+    let num5 = document.getElementById("num5");
+    let num6 = document.getElementById("num6");
+    let num7 = document.getElementById("num7");
+    let num8 = document.getElementById("num8");
+    let num9 = document.getElementById("num9");
+
+
+    num1.addEventListener("click", printSymbol);
+    num2.addEventListener("click", printSymbol);
+    num3.addEventListener("click", printSymbol);
+    num4.addEventListener("click", printSymbol);
+    num5.addEventListener("click", printSymbol);
+    num6.addEventListener("click", printSymbol);
+    num7.addEventListener("click", printSymbol);
+    num8.addEventListener("click", printSymbol);
+    num9.addEventListener("click", printSymbol);
+
+
+</script>
 
 </html>
